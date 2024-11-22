@@ -1,8 +1,7 @@
 package com.devsuperior.dslist.service;
 
 import com.devsuperior.dslist.dto.GameMinDto;
-import com.devsuperior.dslist.entitys.Game;
-import com.devsuperior.dslist.repositories.GaneRepository;
+import com.devsuperior.dslist.repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,7 @@ import java.util.List;
 public class GameService {
 
     @Autowired
-    private GaneRepository gameRepository;
+    private GameRepository gameRepository;
 
     public List<GameMinDto> findAll(){
         var resultado = gameRepository.findAll();
